@@ -1,0 +1,399 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fuentes/Nunito-Regular.ttf') format('truetype');}
+
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fuentes/Nunito-Bold.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fuentes/Nunito-Light.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'Bright';
+  src: url('../fuentes/Bright DEMO.ttf') format('truetype');
+
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  
+  list-style: none;
+}
+
+body {
+  background-image: url(img/fondo.jpg);
+  font-family: "nunito", sans-serif;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.principal { /*Etiqueta contenedora*/
+  width: 100vw;
+  height: 15vh;
+  background-color: rgb(240, 240, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.items {
+  font-family: "Montserrat", sans-serif; display: flex;
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+nav ul {
+  display: flex;
+
+
+}
+
+nav a:hover {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.items a {
+  padding: 0.3rem 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.presentacion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 10vh 15vw;
+
+}
+
+.h3_presentacion{
+font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  border: 0.1rem solid #D49AC9;
+  border-radius: 900px;
+  background-color: black;
+  color: #fdf1c3;
+  display: inline-block;
+}
+
+.h1_presentacion{
+ font-family: 'Bright DEMO', serif;
+ color: #fdf1c3;
+  font-size: 16rem;
+  margin-bottom: -80px;
+
+}
+
+.p_presentacion{
+
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.9rem;
+  margin-top: 5rem;
+   color: #fdf1c3;
+ 
+}
+
+.decorativo_1{
+
+  position: absolute;
+  top: 5%;
+  right: 5%;
+   top: 10rem; 
+}
+
+.decorativo_2{
+position: absolute;
+  top: 5%;
+  right: 2%;
+  top: 20rem; 
+
+}
+
+.decorativo_0{
+position: absolute;
+top: 15%;
+  left: 22.2%;
+  top: 18.5rem; 
+}
+
+
+
+
+.principal a:hover {
+  background-color: black;
+}
+
+.quiensoy {
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 5vh 5vw;
+  margin-top: 15vh;
+}
+
+.info {
+  display: flex;
+  gap: 1.25rem; 
+  flex-direction: column;
+  width: 50%;
+}
+
+.hola {
+  color: rgb(240, 240, 255);
+      font-family: "quicksand";
+      font-size: 4.5rem;
+}
+
+.herramientas{
+  text-align: center;
+height: 50vh;
+}
+  
+.herramientas img{
+  margin: 1.25rem;
+}
+
+.info_herra{  
+        font-size: 3rem;
+}
+
+.estrellas {
+      list-style: none;
+      padding: 0;
+      margin: 0.625rem 0 1.25rem 0;
+      display: flex;
+      justify-content: center;
+}
+  
+.estrella {
+    font-size: 3rem;
+      color: #ccc;
+      margin: 0 3px;
+}
+  
+.estrella.llena {
+      color: rgb(144, 120, 248);
+}
+
+  
+.sobremi {
+      font-size: 20px;
+}
+
+.datos {
+  display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 1.5rem;
+    gap: 3.25rem;
+}
+
+.lista_trabajos{  
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experiencia_lab {
+  display: flex;
+  border: 1px solid rgb(144, 120, 248);
+  border-radius: 0.625rem;
+  padding: 2rem;
+  gap: 1.25rem; 
+  flex-direction: column;
+  width: 35%;
+}
+
+.listaexp{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.listaexp a{
+  color:rgb(144, 120, 248) ;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.descripcion_exp {
+padding-top: 1.5rem;
+  padding-bottom: 1.5rem;S
+}
+
+.tit_exp{
+   font-family: "Verdana";
+    font-size: 40px;
+    color: rgb(144, 120, 248);
+}
+
+.trabajos_art{
+  display: flex;
+  padding: 2rem;
+  border: 1px solid rgb(144, 120, 248);
+  border-radius: 0.625rem;
+  flex-direction: column;S
+
+  img{
+ width: 25vw;
+  height:20vw;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;S
+  }
+}
+
+.año_lista{
+  color: gray;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.lista {
+  color: rgb(144, 120, 248);
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.fecha {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: rgba(189, 190, 192, 0.997);
+}
+
+.fecha_est{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: rgba(101, 101, 102, 0.997);
+padding-bottom: 0.5rem;S
+} 
+
+.info_general{
+  display: flex;
+  background-color: rgb(240, 240, 255, 0.7);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 8vh 10vw 12vh 10vw;
+  flex-direction:row;
+}
+
+.estudios{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap:1.25rem;;
+}
+
+.est_list{
+  display: flex;
+  font-family: quicksand, bold;
+  color: black;
+  flex-direction: column;
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+
+.tit_est{
+  font-family: "Verdana";
+  font-size: 30px;
+  color: black;
+}
+
+.lista_est{
+  display: flex;
+  flex-direction: column;
+  gap:1.25rem;
+}
+
+.lista__est{
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.descripcion_est{
+  color:black;
+  gap:20px;
+   font-size: 12px;
+ }
+
+.idiomas{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.lista_cuali{
+  list-style-type: disc;
+  color:black;
+}
+
+.cuali_list{
+display: flex;
+  font-family: quicksand, bold;
+  color: black;
+flex-direction: column;
+font-size: 1rem;
+gap:1.25rem;
+}
+
+.contacto { 
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.tit_contac{
+  display: flex;
+  font-family: "Verdana";
+  font-size: 30px;
+  color: black;
+}
+
+.footer{
+
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(240, 240, 255);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 54rem;
+}
+
+.footer {
+ 
+    color: black;
+    font-family: nunito;
+    font-size: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+  
+footer:hover {
+}
