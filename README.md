@@ -1,2 +1,2 @@
 # compu3
-No pude avanzar durante el finde como me hubiese gustado. Pero si pude acomodar algunas cosas que me molestaban visualmente. Gracias.
+Buenas! siento que voy muy lento con todo JAJA. pero bueno, sigo probando cosas.
