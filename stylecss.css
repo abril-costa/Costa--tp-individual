@@ -1,4 +1,11 @@
-@font-face {
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+
+@font-face { /*esto no se si esta bien*/
   font-family: 'Nunito';
   src: url('../fuentes/Nunito-Regular.ttf') format('truetype');}
 
@@ -16,16 +23,11 @@
 }
 @font-face {
   font-family: 'Bright';
-  src: url('../fuentes/Bright DEMO.ttf') format('truetype');
+  src: url('../tp_individual/fuentes/Bright\ DEMO.otf') format('truetype');
 
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  
-  list-style: none;
-}
+
 
 body {
   background-image: url(img/fondo.jpg);
@@ -33,7 +35,9 @@ body {
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  
 }
+
 
 .principal { /*Etiqueta contenedora*/
   width: 100vw;
@@ -43,46 +47,49 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.items {
+.items { /*nav*/
   font-family: "Montserrat", sans-serif; display: flex;
   text-decoration: none;
-  color: black;
   justify-content: center;
   align-items: center;
 
 }
 
+.hamburguesa { /*aca oculto el boton para que solo aparezca en la reducción*/
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 nav ul {
   display: flex;
-
-
 }
 
-nav a:hover {
+nav a:hover { /*cuando pasas el cursor cambia de color*/
   background-color: black;
   color: white;
   border-radius: 5px;
 }
 
-.items a {
+.items a { 
   padding: 0.3rem 1rem;
   color: black;
   text-decoration: none;
 }
 
-.presentacion {
-  position: relative;
+.presentacion { /*nav*/
+  position: relative; /*use position para los iconos de las estrellas*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   height: 100vh;
   padding: 10vh 15vw;
-
 }
 
-.h3_presentacion{
+.h3_presentacion { /*este h3 lo lleve a todo el */
 font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
   padding: 0.3rem 0.8rem;
@@ -93,115 +100,80 @@ font-family: 'Nunito', sans-serif;
   display: inline-block;
 }
 
-.h1_presentacion{
+.h1_presentacion { 
  font-family: 'Bright DEMO', serif;
  color: #fdf1c3;
-  font-size: 16rem;
-  margin-bottom: -80px;
-
+  font-size: 16rem; 
+  margin-bottom: -80px; /*esto ya se que es dudoso pero no se como resolverlo*/
 }
 
 .p_presentacion{
-
-
   font-family: 'Nunito', sans-serif;
   font-size: 1.9rem;
   margin-top: 5rem;
-   color: #fdf1c3;
- 
+  color: #fdf1c3;
 }
 
 .decorativo_1{
-
   position: absolute;
   top: 5%;
   right: 5%;
-   top: 10rem; 
+  top: 10rem; 
 }
 
 .decorativo_2{
-position: absolute;
+  position: absolute;
   top: 5%;
   right: 2%;
   top: 20rem; 
-
 }
 
-.decorativo_0{
-position: absolute;
-top: 15%;
-  left: 22.2%;
-  top: 18.5rem; 
-}
-
-
-
-
-.principal a:hover {
-  background-color: black;
+.img_titulo{
+  display: flex;
+  justify-content: row;
 }
 
 .quiensoy {
-
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 5vh 5vw;
+  padding: 5vh 12vw;
   margin-top: 15vh;
 }
 
-.info {
+.h3_quiensoy{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  border: 0.1rem solid #D49AC9;
+  border-radius: 900px;
+  color: #fdf1c3;
+  display: inline-block;
+}
+
+
+.info { /*articulo sobre mi*/
   display: flex;
   gap: 1.25rem; 
   flex-direction: column;
   width: 50%;
 }
 
-.hola {
+.hola { /*titulo HOLA*/
   color: rgb(240, 240, 255);
-      font-family: "quicksand";
-      font-size: 4.5rem;
+  font-family: 'bright demo';
+  font-size: 7.5rem;
+  color: #F5EFB8;
 }
 
-.herramientas{
-  text-align: center;
-height: 50vh;
-}
-  
-.herramientas img{
-  margin: 1.25rem;
-}
-
-.info_herra{  
-        font-size: 3rem;
-}
-
-.estrellas {
-      list-style: none;
-      padding: 0;
-      margin: 0.625rem 0 1.25rem 0;
-      display: flex;
-      justify-content: center;
-}
-  
-.estrella {
-    font-size: 3rem;
-      color: #ccc;
-      margin: 0 3px;
-}
-  
-.estrella.llena {
-      color: rgb(144, 120, 248);
-}
-
-  
-.sobremi {
+.sobremi { 
       font-size: 20px;
+      color: #F5EFB8;
 }
 
-.datos {
+.datos { /*articulo sobre mi*/
   display: flex;
     justify-content: center;
     padding-top: 10vh;
@@ -209,176 +181,181 @@ height: 50vh;
     gap: 3.25rem;
 }
 
-.lista_trabajos{  
+
+.titulo_educacion {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.experiencia_lab {
-  display: flex;
-  border: 1px solid rgb(144, 120, 248);
-  border-radius: 0.625rem;
-  padding: 2rem;
-  gap: 1.25rem; 
-  flex-direction: column;
-  width: 35%;
-}
-
-.listaexp{
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.listaexp a{
-  color:rgb(144, 120, 248) ;
-  font-size: 25px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.descripcion_exp {
-padding-top: 1.5rem;
-  padding-bottom: 1.5rem;S
-}
-
-.tit_exp{
-   font-family: "Verdana";
-    font-size: 40px;
-    color: rgb(144, 120, 248);
-}
-
-.trabajos_art{
-  display: flex;
-  padding: 2rem;
-  border: 1px solid rgb(144, 120, 248);
-  border-radius: 0.625rem;
-  flex-direction: column;S
-
-  img{
- width: 25vw;
-  height:20vw;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;S
-  }
-}
-
-.año_lista{
-  color: gray;
-  font-size: 15px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.lista {
-  color: rgb(144, 120, 248);
-  font-size: 30px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.fecha {
-  display: flex;
-  flex-direction: column;
-  font-size: 15px;
-  color: rgba(189, 190, 192, 0.997);
-}
-
-.fecha_est{
-  display: flex;
-  flex-direction: column;
-  font-size: 15px;
-  color: rgba(101, 101, 102, 0.997);
-padding-bottom: 0.5rem;S
-} 
-
-.info_general{
-  display: flex;
-  background-color: rgb(240, 240, 255, 0.7);
-  padding: 2rem;
-  border-radius: 0.75rem;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 8vh 10vw 12vh 10vw;
-  flex-direction:row;
-}
-
-.estudios{
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  gap:1.25rem;;
-}
-
-.est_list{
-  display: flex;
-  font-family: quicksand, bold;
-  color: black;
-  flex-direction: column;
-  font-size: 1.375rem;
+  padding: 0.4rem 1.5rem;
+  border: 2px solid #D49AC9;
+  border-radius: 999px;
+  background-color: black;
+  color: #fdf1c3;
+  font-size: 1.2rem;
+  font-weight: bold;
   margin-bottom: 1rem;
+ 
 }
 
+.fecha_sub{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
 
-.tit_est{
-  font-family: "Verdana";
-  font-size: 30px;
+.educacion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: #F5EFB8;
+  
+}
+.educacion ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; }
+
+.a_educacion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem
+
+}
+
+.fecha_educacion{
+  font-style: italic;
+}
+
+.subtitulo_educacion{
+font-size: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.experiencia_lab{
+ display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  color: #F5EFB8;
+
+}
+.columna_izquierda{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 5rem 15vw;
+  flex-wrap: wrap;
+}
+
+.columna_derecha{
+  display: flex;
+  flex-direction: column; 
+  gap: 3rem;              
+  padding: 5rem 10vw;
+}
+
+.contemp{
+  display: flex;
+  flex-direction: row;
+}
+
+.software{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
   color: black;
+  font-weight: bold; 
 }
 
-.lista_est{
+.fotos {
+  width: 100%;
+  padding: 2rem 0;
   display: flex;
-  flex-direction: column;
-  gap:1.25rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.lista__est{
-  display: flex;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+
+.imagenes_mas img {
+
+  margin-top: 1.5rem;
+  height: auto;
+padding: 10px;
+  border-radius: 50px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.descripcion_est{
-  color:black;
-  gap:20px;
-   font-size: 12px;
- }
-
-.idiomas{
-  display: flex;
-  flex-direction: column;
-  gap:20px;
+.imagenes_mas img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
-.lista_cuali{
-  list-style-type: disc;
-  color:black;
-}
-
-.cuali_list{
+.todo{
 display: flex;
-  font-family: quicksand, bold;
-  color: black;
-flex-direction: column;
-font-size: 1rem;
-gap:1.25rem;
+justify-content: center;
 }
 
-.contacto { 
+
+.competencias {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.lista_software {
+  list-style: none;
+  border: 2px solid #D49AC9;
+  padding: 1rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  gap: 1rem;
 }
 
-.tit_contac{
+
+
+.item_software {
   display: flex;
-  font-family: "Verdana";
-  font-size: 30px;
-  color: black;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #d49ac9;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
 }
+
+
+.descripcion_software {
+  display: flex;
+  text-align: left;
+}
+
+.habilidades{
+gap: 2rem;
+
+}
+
+.lista_habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lista_habilidades li {
+  background: #D49AC9;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
 
 .footer{
 
-  width: 100vw;
+  
   height: 10vh;
   background-color: rgb(240, 240, 255);
   display: flex;
@@ -392,8 +369,200 @@ gap:1.25rem;
     color: black;
     font-family: nunito;
     font-size: 0.5rem;
-    transition: background-color 0.3s ease;
+
 }
   
-footer:hover {
+
+@media screen and (max-width:600px)/* Altura para que se vea en celus */ /*aca todavia me falta poner todas las otras páginas, solo puse el index*/
+
+{
+.presentacion {
+    padding: 2vh 5vw;
+    align-items: center;
+  }
+
+  .h1_presentacion {
+    font-size: 10rem;
+    margin-bottom: -30px;
+    text-align: center;
+  }
+
+  .h3_presentacion {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .p_presentacion {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .decorativo_0{
+    position: absolute;
+    top: 28.6%;
+    left: 60%;
+
+  }
+
+  .imgprincipal {
+    width: 80px;
+      margin-right: auto;
+    margin-left: 1rem;    
+  }
+
+  .decorativo_1{
+
+  position: absolute;
+    top: 2%;
+    left: 70%;
+  }
+
+  .decorativo_2 {
+    position: absolute;
+    top: 21%;
+    left: 80%;
+  }
+
+  .principal {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+ .hamburguesa { /*boton desplegable*/
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: black;
+    
+  }
+
+  .items {
+    max-height: 0;
+    overflow: hidden; /*el desbordamiento se recorta y el resto se oculta*/
+    transition: max-height 0.4s ease;
+    background-color: rgb(240, 240, 255);
+    position: absolute; /*se despliega arriba del boton*/
+    top: 10%;
+    right: 0;
+    width: 50%;
+    z-index: 10; /*para que no lo pisen los otros elementos*/
+    
+  }
+
+  .items.activo {
+    max-height: 400px; /* Altura máxima para el efecto "desplegable" */
+  }
+
+  .items ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .items a {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/*ANIMACIONES*/
+
+
+.h1_presentacion {
+  animation: estiradoDerecha 15s ease-in-out infinite;
+  transform-origin: left; /* 👈 clave: el estiramiento parte desde la izquierda */
+  display: inline-block;
+}
+
+@keyframes estiradoDerecha { /*esta bien raro, seguro lo cambio jaja*/
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5); /*scaleX cambia el valor del estirado*/
+  }
+}
+
+.estrella_portafolio {
+  animation: girarEstrella 4s linear infinite;
+  transform-origin: center;
+  display: inline-block; 
+}
+
+@keyframes girarEstrella {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.decorativo_1,
+.decorativo_2 {
+
+  animation: pulsoYGira 4s ease-in-out infinite;
+  transform-origin: center;
+
+}
+
+@keyframes pulsoYGira {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.9) rotate(180deg);
+  }
+  100% {
+    transform: scale(3) rotate(360deg);
+  }
+}
+
+.item_software:hover {
+  background-color: black;
+  color: #eebcf2;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 190, 250, 0.6);
+}
+
+.contenedor_icono{
+  position: relative;
+  display: inline-block;
+}
+
+.icono_estrella {
+  position: absolute;
+  top: 10px; 
+  left: 35px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.item_software:hover .icono_estrella { /*cuando paso el mouse aparece la estrella*/
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.lista_habilidades{
+  animation: latido 3s ease-in-out infinite;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
