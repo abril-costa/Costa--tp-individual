@@ -4,6 +4,7 @@
   list-style: none;
 }
 
+/* No te está tomando las fuentes porque están mal vinculadas. En el url, no va la parte de ../ antes de fuentes */
 
 @font-face { /*esto no se si esta bien*/
   font-family: 'Nunito';
@@ -23,7 +24,7 @@
 }
 @font-face {
   font-family: 'Bright';
-  src: url('../tp_individual/fuentes/Bright\ DEMO.otf') format('truetype');
+  src: url('../tp_individual/fuentes/Bright\ DEMO.otf') format('truetype'); /* En esta fijate de borrar el \ en Bright DEMO, el formato sería opentype y además todo lo de tp_individual y demás. Como acá le decis que se va a llamar Bright la fuente, siempre que se la quieras aplicar a algo vas a tener que llamarla Bright!*/
 
 }
 
@@ -105,6 +106,7 @@ font-family: 'Nunito', sans-serif;
  color: #fdf1c3;
   font-size: 16rem; 
   margin-bottom: -80px; /*esto ya se que es dudoso pero no se como resolverlo*/
+  /* En lugar de esta propiedad, podés usar line-height para cambiar el espacio de la caja de texto. */
 }
 
 .p_presentacion{
@@ -139,7 +141,7 @@ font-family: 'Nunito', sans-serif;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 5vh 12vw;
+  padding: 5vh 12vw; /* Evita darle tamaño a cajas de texto con padding. Podes aplicarle directamente a la p un max-width, que le va a decir sólo podés tener este ancho cómo máximo. */
   margin-top: 15vh;
 }
 
