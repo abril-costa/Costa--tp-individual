@@ -8,50 +8,51 @@
     <title>Tp1 Abril</title>
 </head>
 
-</script>
 <body>
     <header class="principal"> 
-  <a href="index.html">
-    <img class="imgprincipal" src="img/ei..png" alt="logomio">
-  </a>
-        <button class="hamburguesa" onclick="toggleMenu()">☰</button> <!-- boton hambuguesa -->
-            <nav class="items">
-        
-                <ul>
-                    <li><a href="sobremi.html">Sobre mi</a></li>
-                    <li><a href="#">Trabajos</a></li>
-                    <li><a href="https://www.behance.net/abrilcosta1">Behance</a></li>
-                    <li> <a href="mailto:abriil.costa@gmail.com">Contacto</a></li>
-                </ul>
-            </nav>
+      <a href="index.html">
+        <img class="imgprincipal" src="img/ei..png" alt="logomio">
+      </a>
+      <button class="hamburguesa" onclick="toggleMenu()">☰</button> <!-- boton hambuguesa -->
+        <nav class="items">
+            <ul>
+              <li><a href="sobremi.html">Sobre mi</a></li>
+              <li><a href="trabajos.html">Trabajos</a></li>
+              <li><a href="https://www.behance.net/abrilcosta1">Behance</a></li>
+              <li> <a href="consultas.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-<main>
-    <section class="presentacion">
-        <div class="img_titulo">
-                    <h3 class="h3_quiensoy">Portfolio</h3>
-                    <img class="estrella_portafolio" src="img/estrella_0.png" alt="estrella rosa">
-                    </div>
-        <h1 class="h1_presentacion">ABRIL</h1>
-        <h1 class="h1_presentacion">COSTA</h1>
-        <p class="p_presentacion">Diseñadora gráfica JR</p> 
-         <img class="decorativo_1" src="img/estrella1.png">
-        <img class="decorativo_2" src="img/estrella2.png">
+  <main>
+      <section class="presentacion">
+          <div class="img_titulo">
+              <h3 class="h3_quiensoy">Portfolio</h3>
+              <img class="estrella_portafolio" src="img/estrella_0.png" alt="estrella rosa" width="38px" height="38px">
+          </div>
+          <h1 class="h1_presentacion">ABRIL COSTA</h1>
+          <p class="p_presentacion">Diseñadora gráfica JR</p> 
+          <img class="decorativo_1" src="img/estrella1.png"width="85px" height="85px">
+          <img class="decorativo_2" src="img/estrella2.png"width="85px" height="85px">
+            <div class="contenedor-flecha">
+             <a href="sobremi.html">
+  <img src="img/flecha.png" alt="flecha hacia abajo" class="flecha-abajo-img"></a>
+</div>
+      </section>
 
-    </section>
+    
+  </main>
 
-</main>
-
-<footer class="footer">
-            <h2>Porfolio para la Cátedra Computación 3</h2>
-            <h2>Copyright© 2025. Todos los derechos reservados.</h2>
+    <footer class="footer">
+      <h2>Porfolio para la Cátedra Computación 3</h2>
+      <h2>Copyright© 2025. Todos los derechos reservados.</h2>
     </footer>
 </body>
 
-<script> /* Utilice js para crear el boton hamburguesa */
-  function toggleMenu() {
-    document.querySelector('.items').classList.toggle('activo');
-  }
-</script>
+  <script> /* Utilice js para crear el boton hamburguesa */
+    function toggleMenu() {
+      document.querySelector('.items').classList.toggle('activo');
+    }
+  </script>
 
 </html>

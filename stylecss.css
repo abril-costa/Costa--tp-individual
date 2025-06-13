@@ -4,55 +4,60 @@
   list-style: none;
 }
 
-
 @font-face { /*esto no se si esta bien*/
   font-family: 'Nunito';
-  src: url('../fuentes/Nunito-Regular.ttf') format('truetype');}
+  src: url('/fuentes/Nunito-Regular.ttf') format('truetype');}
 
 
 @font-face {
   font-family: 'Nunito';
-  src: url('../fuentes/Nunito-Bold.ttf') format('truetype');
+  src: url('/fuentes/Nunito-Bold.ttf') format('truetype');
 
 }
 
 @font-face {
   font-family: 'Nunito';
-  src: url('../fuentes/Nunito-Light.ttf') format('truetype');
+  src: url('/fuentes/Nunito-Light.ttf') format('truetype');
 
 }
 @font-face {
-  font-family: 'Bright';
-  src: url('../tp_individual/fuentes/Bright\ DEMO.otf') format('truetype');
+font-family: 'Bright';
+  src: url('fuentes/Bright DEMO.otf') format('opentype');
 
 }
 
-
-
-body {
+body { 
+  display: flex; /*todo se acomoda en columna.*/
   background-image: url(img/fondo.jpg);
   font-family: "nunito", sans-serif;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
+   opacity: 0;
+  animation: fadeInBody 1s ease forwards;
 }
 
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
+}
 
-.principal { /*Etiqueta contenedora*/
-  width: 100vw;
+/*header*/
+
+.principal { /*Etiqueta contenedora header*/
+  width: auto;
   height: 15vh;
   background-color: rgb(240, 240, 255);
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 .items { /*nav*/
   font-family: "Montserrat", sans-serif; display: flex;
   text-decoration: none;
   justify-content: center;
   align-items: center;
-
 }
 
 .hamburguesa { /*aca oculto el boton para que solo aparezca en la reducción*/
@@ -79,18 +84,20 @@ nav a:hover { /*cuando pasas el cursor cambia de color*/
   text-decoration: none;
 }
 
-.presentacion { /*nav*/
-  position: relative; /*use position para los iconos de las estrellas*/
+/*index*/
+
+.presentacion { 
+  position: relative; /*para que los position absolute de las estrellas se puedan ubicar con este contenedor*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   height: 100vh;
-  padding: 10vh 15vw;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .h3_presentacion { /*este h3 lo lleve a todo el */
-font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
   padding: 0.3rem 0.8rem;
   border: 0.1rem solid #D49AC9;
@@ -101,10 +108,12 @@ font-family: 'Nunito', sans-serif;
 }
 
 .h1_presentacion { 
- font-family: 'Bright DEMO', serif;
+ font-family: 'Bright';
  color: #fdf1c3;
   font-size: 16rem; 
-  margin-bottom: -80px; /*esto ya se que es dudoso pero no se como resolverlo*/
+  margin-bottom: -80px;
+  line-height: 0.8;
+  max-width: 400px;
 }
 
 .p_presentacion{
@@ -115,7 +124,7 @@ font-family: 'Nunito', sans-serif;
 }
 
 .decorativo_1{
-  position: absolute;
+  position: absolute; /*las estrellas*/
   top: 5%;
   right: 5%;
   top: 10rem; 
@@ -133,24 +142,66 @@ font-family: 'Nunito', sans-serif;
   justify-content: row;
 }
 
+.contenedor-flecha {
+  display: flex;
+  margin-top: 2rem;
+  width: 1200px;
+  justify-content: right;
+}
+
+.flecha-abajo-img {
+  height: auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/*sobre mi*/
+
 .quiensoy {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 2rem;
-  padding: 5vh 12vw;
-  margin-top: 15vh;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 7vh 0vw;
 }
 
 .h3_quiensoy{
   font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
-  padding: 0.3rem 0.8rem;
+  padding: 0.3rem 1.5rem;
   border: 0.1rem solid #D49AC9;
   border-radius: 900px;
   color: #fdf1c3;
   display: inline-block;
+}
+
+.h1_quiensoy{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  padding: 0.3rem 1.5rem;
+  border: 0.1rem solid #D49AC9;
+  border-radius: 900px;
+  color: #fdf1c3;
+  display: inline-block;
+}
+
+.titulo_trabajos{
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  text-decoration: none;
 }
 
 
@@ -162,23 +213,15 @@ font-family: 'Nunito', sans-serif;
 }
 
 .hola { /*titulo HOLA*/
-  color: rgb(240, 240, 255);
-  font-family: 'bright demo';
+  font-family: 'Bright';
   font-size: 7.5rem;
   color: #F5EFB8;
 }
 
 .sobremi { 
-      font-size: 20px;
-      color: #F5EFB8;
-}
-
-.datos { /*articulo sobre mi*/
-  display: flex;
-    justify-content: center;
-    padding-top: 10vh;
-    padding-bottom: 1.5rem;
-    gap: 3.25rem;
+  font-size: 20px;
+  color: #F5EFB8;
+  max-width: 600px;
 }
 
 
@@ -187,12 +230,39 @@ font-family: 'Nunito', sans-serif;
   padding: 0.4rem 1.5rem;
   border: 2px solid #D49AC9;
   border-radius: 999px;
-  background-color: black;
   color: #fdf1c3;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
- 
+} 
+
+.contemp {
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.columna_derecha {
+  display: flex;
+  flex: 1 1 15%;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 2rem; 
+}
+
+.columna_izquierda{
+ display: flex;
+  flex: 1 1 12%;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 2rem; 
 }
 
 .fecha_sub{
@@ -207,18 +277,18 @@ font-family: 'Nunito', sans-serif;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
   color: #F5EFB8;
-  
 }
+
 .educacion ul {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; }
+  gap: 1.5rem; 
+}
 
 .a_educacion {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem
-
+  gap: 1.2rem;
 }
 
 .fecha_educacion{
@@ -236,26 +306,6 @@ font-size: 1.5rem;
   gap: 0.5rem;
   margin-bottom: 2.5rem;
   color: #F5EFB8;
-
-}
-.columna_izquierda{
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 5rem 15vw;
-  flex-wrap: wrap;
-}
-
-.columna_derecha{
-  display: flex;
-  flex-direction: column; 
-  gap: 3rem;              
-  padding: 5rem 10vw;
-}
-
-.contemp{
-  display: flex;
-  flex-direction: row;
 }
 
 .software{
@@ -275,33 +325,6 @@ font-size: 1.5rem;
   align-items: center;
 }
 
-
-.imagenes_mas img {
-
-  margin-top: 1.5rem;
-  height: auto;
-padding: 10px;
-  border-radius: 50px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.imagenes_mas img:hover {
-  transform: scale(1.05) rotate(1deg);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-}
-
-.todo{
-display: flex;
-justify-content: center;
-}
-
-
-.competencias {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .lista_software {
   list-style: none;
   border: 2px solid #D49AC9;
@@ -311,8 +334,6 @@ justify-content: center;
   flex-direction: column;
   gap: 1rem;
 }
-
-
 
 .item_software {
   display: flex;
@@ -325,15 +346,9 @@ justify-content: center;
   font-weight: bold;
 }
 
-
 .descripcion_software {
   display: flex;
   text-align: left;
-}
-
-.habilidades{
-gap: 2rem;
-
 }
 
 .lista_habilidades {
@@ -341,7 +356,7 @@ gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .lista_habilidades li {
@@ -352,142 +367,354 @@ gap: 2rem;
   font-weight: bold;
 }
 
+.imagenes_mas img {
+  margin-top: 1.5rem;
+  height: auto;
+  padding: 10px;
+  border-radius: 50px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
 
-.footer{
+.section_trabajemos{
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-decoration: none;
+}
 
+.section_trabajemos a {
+  text-decoration: none;
+}
+
+.trabajemos_p {
+  font-family: 'Bright';
+  font-size: 90px;
+  padding: 0.3rem 1.5rem;
+  border: 0.1rem solid #D49AC9;
+  border-radius: 900px;
+  color: #fdf1c3;
+  display: flex;
+  transition: background-color 0.3s ease;
+}
+
+.trabajemos_p:hover {
+  background-color :grey;
+}
+
+/*trabajos / galeria */
+
+.flecha-atras { /*este esta en el lareima_img*/
+padding: 10px;
+}
+
+.section_afiches{
+  display: grid; /*acá utilice grid para crear la galeria*/
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.imagenes_mas img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.competencias {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.galeria{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 columnas */
+  justify-items: center;
+  gap: 5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5rem 5rem;
+}
+
+.titulo_formulario {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.galeria_0{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 350px; 
+  width: 100%;
+  gap: 0.5rem; 
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria_0 {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.galeria_0:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 5px #D49AC9
+}
+
+
+.galeria_0:hover {
+  transform: scale(1.08);
+}
+
+.galeria_0:last-child{ /*para que el "boricua" ocupe dos celdas*/
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.galeria_0:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+  border-radius: 20px; /* más suave */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria_0 img,
+.galeria_0 video {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.summary_galeria {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  border: 2px solid #D49AC9;
+  border-radius: 999px;
+  color: #fdf1c3;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  transition: margin 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94); /*animación del trazo atras de la img*/
+}
+
+.p_galeria {
+ font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.deco_cons{
+  position: absolute;
+  left: 2rem;
+  top: 40rem;  
+}
+.deco_const{
+  position: absolute;
+  left: 15rem;
+  top: 40rem;  
+}
+
+/*consultas*/
+
+.contacto_contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 2rem;
+  max-width: 1300px;
+  height: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.contacto_texto {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-width: 500px;
+  color: #F5EFB8;
+}
+
+.h1_contactame{
+  color: rgb(240, 240, 255);
+  font-family: 'Bright';
+  font-size: 5.5rem;
+  color: #F5EFB8;
+
+
+}
+
+.redes_contacto{
+  display: flex;
+  gap: 25px;
+
+}
+
+.formulario_contenedor {
+  flex: 1 1 40%; /* asi no se desborda */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap; /*se acomoda abajo si no entra*/
+  justify-content: space-between;
+  max-width: 600px;
+  padding: 40px;
+  border: 0.1rem solid #D49AC9;
+  border-radius: 25px;
+  color: #F5EFB8;
+  font-family: 'Nunito', sans-serif;
+}
+
+.form_1,
+.form_2 {
   
+  width: 48%;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.boton {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.radio-group label {
+  margin-bottom: 0;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+label {
+  display: flex;
+  margin-bottom: 15px; /* espacio tipo gap*/
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px 15px; 
+  border: 2px solid #D49AC9; /* borde internos */
+  border-radius: 20px;
+  background-color: transparent;
+  color: #F5EFB8;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+}
+
+
+textarea {
+  height: 180px; 
+  margin-top: 2px; /* Espacio debajo de consulta y botones */
+}
+
+input[type="reset"],
+input[type="submit"] {
+  background-color: #D49AC9;
+  padding: 12px 30px; 
+  border: none;
+  border-radius: 30px; /*borde botones*/
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 20px auto 0 auto;
+
+}
+
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #8f5f92;
+}
+
+form label,
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/*FOOTER*/
+
+.footer{ 
   height: 10vh;
   background-color: rgb(240, 240, 255);
   display: flex;
   justify-content: center; 
   align-items: center;
   gap: 54rem;
+  color: black;
+  width: auto;
+  font-family: nunito;
+  font-size: 0.5rem;
 }
-
-.footer {
- 
-    color: black;
-    font-family: nunito;
-    font-size: 0.5rem;
-
-}
-  
-
-@media screen and (max-width:600px)/* Altura para que se vea en celus */ /*aca todavia me falta poner todas las otras páginas, solo puse el index*/
-
-{
-.presentacion {
-    padding: 2vh 5vw;
-    align-items: center;
-  }
-
-  .h1_presentacion {
-    font-size: 10rem;
-    margin-bottom: -30px;
-    text-align: center;
-  }
-
-  .h3_presentacion {
-    font-size: 1.2rem;
-    padding: 0.2rem 0.6rem;
-  }
-
-  .p_presentacion {
-    font-size: 1.6rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .decorativo_0{
-    position: absolute;
-    top: 28.6%;
-    left: 60%;
-
-  }
-
-  .imgprincipal {
-    width: 80px;
-      margin-right: auto;
-    margin-left: 1rem;    
-  }
-
-  .decorativo_1{
-
-  position: absolute;
-    top: 2%;
-    left: 70%;
-  }
-
-  .decorativo_2 {
-    position: absolute;
-    top: 21%;
-    left: 80%;
-  }
-
-  .principal {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem 0;
-  }
-
-  .footer {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    padding: 1rem;
-  }
-
- .hamburguesa { /*boton desplegable*/
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    color: black;
-    
-  }
-
-  .items {
-    max-height: 0;
-    overflow: hidden; /*el desbordamiento se recorta y el resto se oculta*/
-    transition: max-height 0.4s ease;
-    background-color: rgb(240, 240, 255);
-    position: absolute; /*se despliega arriba del boton*/
-    top: 10%;
-    right: 0;
-    width: 50%;
-    z-index: 10; /*para que no lo pisen los otros elementos*/
-    
-  }
-
-  .items.activo {
-    max-height: 400px; /* Altura máxima para el efecto "desplegable" */
-  }
-
-  .items ul {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    padding: 1rem 0;
-  }
-
-  .items a {
-    font-size: 1.1rem;
-    padding: 1.2rem;
-    display: flex;
-    width: 100%;
-    text-align: center;
-  }
-}
-
 
 
 /*ANIMACIONES*/
 
+/*ANIMACIÓN ESTRELLA BOTON "ENVIAR"*/
+
+.boton_estrella{
+  position: relative;
+  display: inline-block;}
+
+
+.boton__estrella {
+  position: absolute;
+  top: 15%;
+  left: 90%;
+  transform: translateX(-50%);
+  height: auto;
+  opacity: 0; 
+  transition: opacity 0.3s ease; /* animación suave */
+  
+}
+
+/* Al hacer hover sobre el botón, la estrella aparece */
+.boton_estrella:hover .boton__estrella {
+  opacity: 1;
+}
 
 .h1_presentacion {
   animation: estiradoDerecha 15s ease-in-out infinite;
-  transform-origin: left; /* 👈 clave: el estiramiento parte desde la izquierda */
+  transform-origin: left; 
   display: inline-block;
+ 
 }
 
 @keyframes estiradoDerecha { /*esta bien raro, seguro lo cambio jaja*/
@@ -495,7 +722,7 @@ gap: 2rem;
     transform: scaleX(1);
   }
   50% {
-    transform: scaleX(1.5); /*scaleX cambia el valor del estirado*/
+    transform: scaleX(1.2); /*scaleX cambia el valor del estirado*/
   }
 }
 
@@ -510,6 +737,26 @@ gap: 2rem;
   100% { transform: rotate(360deg); }
 }
 
+
+.deco_cons,
+.deco_const {
+
+  animation: pulsoYGira 7s ease-in-out infinite;
+  transform-origin: center;
+
+}
+
+@keyframes pulsoYGira {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.9) rotate(180deg); 
+  }
+  100% {
+    transform: scale(1) rotate(360deg); /* vuelve a su tamaño  */
+  }
+}
 
 .decorativo_1,
 .decorativo_2 {
@@ -566,3 +813,192 @@ gap: 2rem;
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.08); }
 }
+
+
+@media screen and (max-width:600px)/* Altura para que se vea en celus */ /*aca todavia me falta poner todas las otras páginas, solo puse el index*/
+
+{
+
+.presentacion {
+    padding: 10vh;
+    align-items: center;
+  }
+
+  .h1_presentacion {
+    font-size: 10rem;
+    line-height: 0.8;
+    text-align: center;
+    animation: none;
+  
+  }
+
+  .h3_presentacion {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+    justif
+  }
+
+  .fotos{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .p_presentacion {
+    font-size: 1.6rem;
+    margin-top: 6rem;
+    text-align: center;
+  }
+
+ .principal {
+    flex-direction: column;
+    align-items: flex-start; /* esto hace que el logo no quede centrado */
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .imgprincipal {
+    width: 80px;
+    margin-left: 0.8rem;
+    margin-right: auto;
+  }
+
+  .decorativo_1{
+    position: absolute;
+    top: 8%;
+    left: 80%;
+    animation: none;
+
+  }
+
+  .decorativo_2 {
+    position: absolute;
+    top: 16%;
+    left: 9+0%;
+    animation: none;
+  }
+
+.decorativo_1, 
+.decorativo_2 {
+
+  animation: pulsoYGira 4s ease-in-out infinite;
+  transform-origin: center;
+
+}
+
+@keyframes pulsoYGira {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+  .contenedor-flecha {
+  width: 100%; 
+  justify-content: center; 
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  }
+
+  .flecha-abajo-img {
+    width: 50px; 
+    height: auto;
+  }
+
+
+  .quiensoy{
+  flex-direction: column;
+  justify-content: center;
+  }
+
+  .img_titulo{
+  justify-content: center;
+  margin-bottom: 2rem;
+  }
+
+   .a_educacion{
+  display: flex;
+  width: 100%;
+  text-align: center;
+
+  }
+  
+.trabajemos_p{
+  font-size: 4rem;
+  padding: 0.2rem 0.6rem;
+    
+}
+.contemp {
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+  .sobremi{
+  justify-content: center; 
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+
+  }
+
+  .footer {
+     flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  }
+
+ .hamburguesa { /*boton desplegable*/
+    display: block; 
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: black;
+    
+  }
+
+  .items {
+    max-height: 0;
+    overflow: hidden; 
+    transition: max-height 0.4s ease;
+    background-color: rgb(240, 240, 255);
+    position: absolute; 
+    top: 10%;
+   width: 200px;  /* ancho fijo */
+    left: auto;
+    right: 1rem;
+    z-index: 10; /*para que no lo pisen los otros elementos*/
+    
+  }
+
+  .items.activo {
+    max-height: 400px; /* Altura máxima para el efecto "desplegable" */
+  }
+
+  .items ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .items a {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+
+
+

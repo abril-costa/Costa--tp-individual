@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecss.css" />  
+    <link rel="shortcut icon" href="img/ei..svg" type="image/x-icon" />     
+    <title>Tp1 Abril</title>
+</head>
+
+</script>
+<body>
+    <header class="principal"> 
+        <a href="index.html">
+            <img class="imgprincipal" src="img/ei..png" alt="logomio">
+        </a>
+      <button class="hamburguesa" onclick="toggleMenu()">☰</button> <!-- boton hambuguesa -->
+            <nav class="items">
+        
+                <ul>
+                    <li><a href="sobremi.html">Sobre mi</a></li>
+                    <li><a href="trabajos.html">Trabajos</a></li>
+                    <li><a href="https://www.behance.net/abrilcosta1">Behance</a></li>
+                    <li> <a href="consultas.html">Contacto</a></li>
+                </ul>
+            </nav>
+    </header>
+
+<main>
+
+      <img class="deco_cons" src="img/estrella1.png">
+      <img class="deco_const" src="img/estrella2.png">
+
+  <div class="contacto_contenedor">
+    <section class="contacto_texto">
+      <h1 class="h1_contactame">CONTACTAME</h1>
+        <p>
+          Si te gustaría trabajar conmigo o creés que puedo aportar a tu proyecto, no dudes en escribirme.
+          Me encanta colaborar en ideas creativas y sumar mi experiencia en diseño y comunicación visual.
+          ¡Estoy abierta a nuevas propuestas y desafíos!
+        </p>
+      <div class="redes_contacto">
+          <a href="https://www.behance.net/" target="_blank" >
+            <img class="icono_consulta" src="img/be.png" width="50x" height="50px">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img class="icono_consulta" src="img/ig.png" width="50x" height="50px">
+          </a>
+      </div>
+    </section> 
+
+    <section class="formulario_contenedor">
+      <form method="post" action="mailto:abriil.costa@gmail.com?subject='Email enviado desde el formulario'" target="_blank" enctype="text/plain">
+        <div class="form_1">
+          <label for="nombre">Nombre y Apellido</label>
+            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="fulanito de tal" required>
+        </div>
+      <div class="form_2">
+          <label for="email">Correo electrónico</label>
+            <input type="text" name="email" id="email" maxlength="30" placeholder="123@gmail.com" required>
+         </div>
+      <div class="form_1">
+  <label>Proyecto</label>
+  <div class="boton">
+    <input type="radio" name="dg" value="dg" id="dg">
+    <label for="dg">Diseño gráfico</label>
+    <input type="radio" name="dg" value="dw" id="dw">
+    <label for="dw">Diseño web</label>
+  </div>
+</div>
+      <div class="form_2">
+          <label for="celular">Celular</label>
+            <input type="text" name="celular" id="celular" maxlength="30" placeholder="1122334455" required>
+      </div>
+
+          <label for="mensaje">Consulta</label>
+            <textarea name="mensaje" id="mensaje"></textarea>
+      <section class="botones">
+        <input type="reset" value="Borrar">
+          <div class="boton_estrella">
+            <input type="submit" value="Enviar">
+              <img class="boton__estrella" src="img/estrella4.png"> 
+          </div>
+      </section>
+    </section>
+    </form>
+  </div>
+</main>
+
+
+  <footer class="footer">
+    <h2>Porfolio para la Cátedra Computación 3</h2>
+    <h2>Copyright© 2025. Todos los derechos reservados.</h2>
+  </footer>
+</body>
+
+  <script> /* Utilice js para crear el boton hamburguesa */
+    function toggleMenu() {
+      document.querySelector('.items').classList.toggle('activo');
+    }
+  </script>
+
+</html>
